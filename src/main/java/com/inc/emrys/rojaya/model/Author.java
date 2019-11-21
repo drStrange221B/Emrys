@@ -11,7 +11,7 @@ import java.util.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+//@ToString
 public class Author {
 
     @Id
@@ -20,9 +20,22 @@ public class Author {
     private String firstName;
     private String lastName;
 
+    public Author(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+
     @ManyToMany(mappedBy="authors")
     private Set<Book> books = new HashSet<>();
 
-
-
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", books=" + books +
+                '}';
+    }
 }
