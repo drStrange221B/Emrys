@@ -2,7 +2,6 @@ package com.inc.emrys.rojaya.model;
 
 
 import lombok.*;
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
