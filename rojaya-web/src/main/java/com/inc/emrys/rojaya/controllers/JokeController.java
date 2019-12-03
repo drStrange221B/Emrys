@@ -17,7 +17,7 @@ public class JokeController {
 //        this.jokeService = jokeService;
 //    }
 
-    @RequestMapping({"/",""})
+    @RequestMapping({"/jokes"})
     public String showJoke(Model mOdel)
     {
 
