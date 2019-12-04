@@ -4,8 +4,6 @@ import com.inc.emrys.rojaya.model.Owner;
 import com.inc.emrys.rojaya.model.Vet;
 import com.inc.emrys.rojaya.services.OwnerService;
 import com.inc.emrys.rojaya.services.VetService;
-import com.inc.emrys.rojaya.services.map.OwnerServiceMap;
-import com.inc.emrys.rojaya.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -16,9 +14,9 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
 
 
-    public DataLoader() {
-        ownerService= new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

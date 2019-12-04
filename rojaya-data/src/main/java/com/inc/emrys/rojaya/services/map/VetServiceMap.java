@@ -2,9 +2,11 @@ package com.inc.emrys.rojaya.services.map;
 
 import com.inc.emrys.rojaya.model.Vet;
 import com.inc.emrys.rojaya.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Vet findById(Long id) {
