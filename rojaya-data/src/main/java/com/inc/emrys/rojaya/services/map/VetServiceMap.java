@@ -1,11 +1,16 @@
 package com.inc.emrys.rojaya.services.map;
 
 import com.inc.emrys.rojaya.model.Vet;
-import com.inc.emrys.rojaya.services.CrudService;
+import com.inc.emrys.rojaya.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
+    @Override
+    public Vet findById(Long id) {
+        return null;
+    }
+
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
@@ -15,6 +20,7 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements Crud
     public void deleteById(Long id) {
         super.deleteById(id);
     }
+
 
     @Override
     public void delete(Vet object) {
