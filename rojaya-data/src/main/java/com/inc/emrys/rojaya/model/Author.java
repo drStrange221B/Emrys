@@ -1,20 +1,14 @@
 package com.inc.emrys.rojaya.model;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+@Data
 @Entity
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 //@ToString
 public class Author {
 
@@ -33,13 +27,14 @@ public class Author {
     @ManyToMany(mappedBy="authors")
     private Set<Book> books = new HashSet<>();
 
-    @Override
-    public String toString() {
-        return "Author{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", books=" + books +
-                '}';
+    public Author(int id, String firstName, String lastName, Set<Book> books) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.books = books;
     }
+
+    public Author() {
+    }
+
 }

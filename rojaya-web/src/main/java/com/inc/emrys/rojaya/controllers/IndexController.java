@@ -20,4 +20,18 @@ public class IndexController {
         return "notimplemented";
     }
 
+
+    @RequestMapping("/user")
+    public String user()
+    {
+        return "user";
+    }
+
+    @RequestMapping("/admin")
+    public String admin()
+    {
+        return "admin";
+    }
+
+
 }
