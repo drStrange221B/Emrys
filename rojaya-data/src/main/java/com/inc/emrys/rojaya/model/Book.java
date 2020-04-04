@@ -11,8 +11,6 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
-
-@AllArgsConstructor
 @EqualsAndHashCode(of={"id"})
 @ToString
 public class Book {
@@ -27,6 +25,7 @@ public class Book {
     private Publisher publisher;
 
 
+    @Builder
     public Book(String title, String isbn, Publisher publisher) {
         this.title = title;
         this.isbn = isbn;
